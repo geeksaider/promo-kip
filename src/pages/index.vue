@@ -1,17 +1,21 @@
-<script setup lang="ts">
-import Counter from "@/components/Counter.vue";
+<script setup>
+import Header from "@/components/Header.vue";
 </script>
 
 <template>
-  <main
-    class="flex flex-col justify-center items-center gap-8 h-screen pb-[20vh]"
-  >
-    <div class="flex items-start gap-3">
-      <h1 class="text-4xl text-stone-600">
-        Vue + Vite + Tailwind + Typescript
-      </h1>
-      <span class="text-stone-500 text-lg">template</span>
-    </div>
-    <Counter />
+  <main class="font-cute px-4">
+    <Header class="font-cute" />
+    <section class="flex justify-around">
+      <div>
+        <details>
+          <summary>Работы</summary>
+          <a href=""></a>
+        </details>
+      </div>
+      <div class="flex flex-col gap-4">
+        <img src="/assets/myface.jpeg" alt="" class="h-[600px] rounded-lg" />
+      </div>
+      <div>s</div>
+    </section>
   </main>
 </template>
