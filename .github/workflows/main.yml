@@ -28,7 +28,7 @@ jobs:
      run: docker buildx create --use 
      
    - name: Create docker image
-     run: docker buildx build -t ghcr.io/geeksaider/kip-proxy --push
+     run: docker buildx build -t ghcr.io/geeksaider/kip-proxy --push .
    
   # deploy:
   #   needs: build
