@@ -10,16 +10,23 @@ jobs:
    steps: 
    - name: Checkout code
      uses: actions/checkout@v4
+     
    - name: Install dependencies
      run: npm i
+     
    - name: Build project
      run: npm run build
+     
    - name: Login to GitHub container registry
      uses: docker/login-action@v3
      with:
       registry: ghcr.io
       username: ${{ github.actor }}
       password: ${{ secrets.GITHUB_TOKEN }}
+      
+   - name: Docker create buildx
+     run: docker buildx create --use 
+     
    - name: Create docker image
      run: docker buildx build -t ghcr.io/geeksaider/kip-proxy --push
    
