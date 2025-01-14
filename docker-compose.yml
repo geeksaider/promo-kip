@@ -1,0 +1,9 @@
+services:
+    proxy:
+        container_name: kip-proxy
+        image: ghcr.io/geeksaider/kip-proxy:latest
+        ports:
+            - 80:80
+            - 443:443
+        volume:
+            - ./data:/data/caddy
