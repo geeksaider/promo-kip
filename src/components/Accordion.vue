@@ -1,23 +1,36 @@
 <script setup>
+import { ref } from "vue";
 const { title, links } = defineProps(["title", "links"]);
+
+const active = ref(false);
+
+function updateState() {
+  active.value == false ? (active.value = true) : (active.value = false);
+  console.log(active.value);
+}
 </script>
 
 <template>
-  <details
-    class="bg-stone-100 rounded-lg group transition-all pb-0 open:pb-4 duration-500"
-    name="accordiom"
+  <section
+    class="rounded-lg group transition-all duration-500"
+    :class="active ? '' : ''"
   >
-    <summary
-      class="bg-stone-200 pr-8 pl-4 py-2 font-semibold text-xl appearance-none marker:[display:none] rounded-lg cursor-pointer [list-style:none] flex items-center gap-4 mb-0 transition-all duration-300 group-open:mb-3 ease-out"
+    <div
+      class="bg-stone-200 pr-8 pl-4 py-2 font-semibold text-xl rounded-lg cursor-pointer flex items-center gap-4 mb-0 transition-all duration-300 ease-out"
+      @click="updateState()"
     >
       <img
         src="/arrow.svg"
         alt=""
-        class="bg-white p-1.5 rounded-full group-open:-rotate-180 duration-300 transition-transform ease-out"
+        class="bg-white p-1.5 rounded-full duration-300 transition-transform ease-out"
+        :class="active ? '-rotate-180' : ''"
       />
       <p>{{ title }}</p>
-    </summary>
-    <div class="flex flex-col gap-2 px-6 transition-all ease-out duration-300">
+    </div>
+    <div
+      class="h-0 flex flex-col pl-4 overflow-hidden gap-2 transition-all ease-out duration-[1000ms]"
+      :class="active ? 'h-full  py-4 bg-stone-100' : ''"
+    >
       <a
         :href="item.link"
         v-for="item in links"
@@ -26,5 +39,5 @@ const { title, links } = defineProps(["title", "links"]);
         >{{ item.title }}</a
       >
     </div>
-  </details>
+  </section>
 </template>
