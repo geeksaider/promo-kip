@@ -4,7 +4,7 @@ const { title, links } = defineProps(["title", "links"]);
 
 <template>
   <details
-    class="bg-stone-100 rounded-b-md group transition-all pb-0 open:pb-4 duration-500"
+    class="bg-stone-100 rounded-b-md list-none group transition-all pb-0 open:pb-4 duration-500"
     name="accordiom"
   >
     <summary

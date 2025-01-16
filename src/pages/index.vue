@@ -7,8 +7,10 @@ import Arrow from "@/components/icons/Arrow.vue";
 <template>
   <main class="font-cute px-4">
     <Header class="font-cute" />
-    <section class="flex justify-around max-w-[900px] max-sm:flex-wrap mx-auto">
-      <div class="flex flex-col gap-12">
+    <section
+      class="flex justify-around max-w-[900px] gap-4 max-sm:flex-wrap mx-auto"
+    >
+      <div class="flex flex-col gap-12 max-sm:gap-4">
         <Accordion
           title="Работы"
           :links="[
@@ -61,14 +63,14 @@ import Arrow from "@/components/icons/Arrow.vue";
           ]"
         />
       </div>
-      <div class="basis-1/3 max-sm:order-3">
+      <div class="max-sm:order-3">
         <img
           src="/assets/myface.jpeg"
           alt=""
-          class="aspect-[15/20] h-[60vh] object-contain rounded-lg"
+          class="max-h-[60vh] object-contain rounded-lg"
         />
       </div>
-      <div class="flex flex-col gap-12">
+      <div class="flex flex-col gap-12 max-sm:gap-4">
         <Accordion
           title="Работы"
           :links="[
