@@ -15,7 +15,7 @@ import Arrow from "@/components/icons/Arrow.vue";
         alt=""
         class="max-h-[60vh] object-contain rounded-lg"
       />
-      <div class="flex flex-col gap-12 max-sm:gap-4">
+      <div class="flex flex-col gap-4 max-sm:gap-4">
         <Accordion
           title="Лабораторные работы"
           name="first"
