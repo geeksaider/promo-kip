@@ -21,7 +21,7 @@ const active = ref(false);
       <p>{{ title }}</p>
     </div>
     <div
-      class="flex flex-col pt-8 -mt-4 overflow-hidden rounded-b-xl max-h-0 gap-3 pl-8 transition-all duration-700"
+      class="flex flex-col pt-8 -mt-4 overflow-hidden rounded-b-xl max-h-0 gap-3 pl-8 transition-all duration-200"
       :class="
         active
           ? 'pb-32 py-4 ease-in bg-stone-200/10 '
