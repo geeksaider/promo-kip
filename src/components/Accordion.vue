@@ -8,7 +8,7 @@ const { title, links } = defineProps(["title", "links"]);
     name="accordiom"
   >
     <summary
-      class="bg-stone-200 pr-8 pl-4 py-2 font-semibold text-xl appearance-none marker:[content:''] rounded-lg cursor-pointer [list-style:none] flex items-center gap-4 mb-0 transition-all duration-300 group-open:mb-3 ease-out"
+      class="bg-stone-200 pr-8 pl-4 py-2 font-semibold text-xl appearance-none marker:[display:none] rounded-lg cursor-pointer [list-style:none] flex items-center gap-4 mb-0 transition-all duration-300 group-open:mb-3 ease-out"
     >
       <img
         src="/arrow.svg"
