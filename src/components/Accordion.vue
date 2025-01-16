@@ -4,11 +4,11 @@ const { title, links } = defineProps(["title", "links"]);
 
 <template>
   <details
-    class="bg-stone-100 rounded-b-md group transition-all pb-0 open:pb-4 duration-500"
+    class="bg-stone-100 rounded-lg group transition-all pb-0 open:pb-4 duration-500"
     name="accordiom"
   >
     <summary
-      class="bg-stone-200 px-8 py-2 font-semibold text-xl marker:[content:''] rounded-md cursor-pointer [list-style:none] flex items-center gap-4 mb-0 transition-all duration-300 group-open:mb-3 ease-out"
+      class="bg-stone-200 pr-8 pl-4 py-2 font-semibold text-xl appearance-none marker:[content:''] rounded-lg cursor-pointer [list-style:none] flex items-center gap-4 mb-0 transition-all duration-300 group-open:mb-3 ease-out"
     >
       <img
         src="/arrow.svg"
