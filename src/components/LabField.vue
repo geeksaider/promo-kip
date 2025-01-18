@@ -12,7 +12,8 @@ import Back from "./Back.vue";
                     <h1 class="text-2xl font-semibold">Корзина</h1>
                     <p>
                         Построение диаграммы "Вариантов использования"<br />
-                        и диаграммы "Последовательности", генерация кода
+                        и диаграммы "Последовательности",<br />
+                        генерация кода
                     </p>
                 </article>
                 <article class="flex flex-col gap-2">
