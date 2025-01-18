@@ -1,31 +1,40 @@
 <script setup>
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
 const { title, links } = defineProps(["title", "links"]);
+
+const active = ref(false);
 </script>
 
 <template>
-    <details
-        class="bg-stone-100 rounded-b-md group transition-all duration-500"
-    >
-        <summary
-            class="bg-stone-200 px-8 py-2 font-semibold text-xl rounded-md cursor-pointer list-none flex items-center gap-4 mb-0 transition-all duration-300 group-open:mb-4 ease-out"
+    <section class="rounded-lg">
+        <div
+            class="pr-8 pl-4 py-2 font-semibold text-xl rounded-lg cursor-pointer bg-stone-200 flex items-center gap-4"
+            :class="active ? '' : ''"
+            @click="active = !active"
         >
             <img
                 src="/arrow.svg"
                 alt=""
-                class="bg-white p-1.5 rounded-full group-open:-rotate-180 duration-300 transition-transform ease-out"
+                class="bg-white p-1.5 rounded-full duration-300 transition-transform"
+                :class="active ? '-rotate-180' : ''"
             />
             <p>{{ title }}</p>
-        </summary>
+        </div>
         <div
-            class="flex flex-col px-8 gap-2 -mb-16 group-open:mb-0 transition-all ease-out duration-300"
+            class="flex flex-col pt-8 -mt-4 overflow-hidden rounded-b-xl max-h-0 gap-3 pl-8 transition-all duration-200"
+            :class="
+                active
+                    ? 'pb-32 py-4 ease-in bg-stone-200/30 '
+                    : 'ease-out opacity-0 pointer-events-none  '
+            "
         >
-            <a
-                :href="item.link"
+            <RouterLink
+                :to="item.link"
                 v-for="item in links"
-                target="_blank"
-                class="last:mb-4"
-                >{{ item.title }}</a
+                class="text-lg font-[550] hover:text-stone-600 w-[90%]"
+                >{{ item.title }}</RouterLink
             >
         </div>
-    </details>
+    </section>
 </template>
