@@ -5,7 +5,7 @@ import Back from "./Back.vue";
 <template>
     <main class="font-cute">
         <section
-            class="max-w-[900px] mx-auto justify-around bg-gradient-to-r from-neutral-100 to-neutral-200 rounded-xl flex py-6"
+            class="max-w-[900px] mx-auto max-sm:items-center justify-around bg-gradient-to-r max-sm:flex-col max-sm:text-center max-sm:gap-10 from-neutral-100 to-neutral-200 rounded-xl flex py-6"
         >
             <div class="flex flex-col gap-6">
                 <article class="flex flex-col gap-1">
@@ -17,7 +17,7 @@ import Back from "./Back.vue";
                 </article>
                 <article class="flex flex-col gap-2">
                     <h2 class="text-lg font-semibold">Референсы:</h2>
-                    <div class="flex gap-2 items-center">
+                    <div class="flex gap-2 items-center max-sm:justify-center">
                         <img
                             src="/ali.svg"
                             alt=""
@@ -38,10 +38,15 @@ import Back from "./Back.vue";
                     </div>
                 </article>
             </div>
-            <div class="flex flex-col gap-2 justify-center">
-                <Button img="figma" link="/">UI Figma</Button>
+            <div class="flex flex-col gap-2 justify-center max-sm:w-fit">
+                <Button img="figma" link="">UI Figma</Button>
                 <Button img="diagram" link="/">Диаграммы</Button>
                 <Button img="link" link="/">Сайт</Button>
+                <Button
+                    img="word"
+                    link="https://disk.yandex.ru/i/YHuESsm5MSI9wQ"
+                    >Отчет</Button
+                >
             </div>
         </section>
         <Back></Back>
