@@ -1,5 +1,6 @@
 <script setup>
 import Button from "./Button.vue";
+import Back from "./Back.vue";
 </script>
 <template>
     <main class="font-cute">
@@ -38,10 +39,11 @@ import Button from "./Button.vue";
                 </article>
             </div>
             <div class="flex flex-col gap-2 justify-center">
-                <Button img="figma">UI Figma</Button>
-                <Button img="diagram">Диаграммы</Button>
-                <Button img="link">Сайт</Button>
+                <Button img="figma" link="/">UI Figma</Button>
+                <Button img="diagram" link="/">Диаграммы</Button>
+                <Button img="link" link="/">Сайт</Button>
             </div>
         </section>
+        <Back></Back>
     </main>
 </template>
