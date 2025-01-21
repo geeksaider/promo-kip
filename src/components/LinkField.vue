@@ -11,38 +11,22 @@ import Accordion from "@/components/Accordion.vue";
             alt=""
             class="max-h-[60vh] object-contain rounded-lg max-sm:hidden"
         />
-        <div class="flex flex-col gap-4 max-sm:gap-4 max-sm:mb-12">
+        <div class="flex flex-col gap-4 max-sm:mb-12">
             <Accordion
                 title="Лабораторные работы"
                 name="first"
                 :links="[
                     {
                         title: 'Практическая 1 (16.01.2025) ',
-                        link: '/firstLab',
-                    },
-                    {
-                        title: 'Работа 2',
-                        link: '#',
-                    },
-                    {
-                        title: 'Работа 3',
-                        link: '#',
+                        link: '/Labs/first',
                     },
                 ]"
             />
             <Accordion
-                title="Доработки"
+                title="Отработки"
                 :links="[
                     {
-                        title: 'Работа 1',
-                        link: '#',
-                    },
-                    {
-                        title: 'Работа 2',
-                        link: '#',
-                    },
-                    {
-                        title: 'Работа 3',
+                        title: 'Личный кабинет',
                         link: '#',
                     },
                 ]"
@@ -51,16 +35,25 @@ import Accordion from "@/components/Accordion.vue";
                 title="Учебная практика"
                 :links="[
                     {
-                        title: 'Работа 1',
+                        title: 'Пока пусто',
                         link: '#',
                     },
+                ]"
+            />
+            <Accordion
+                title="ПиРВП и ТИС"
+                :links="[
                     {
-                        title: 'Работа 2',
-                        link: '#',
+                        title: 'Практическая 1 (14.01)',
+                        link: '/PRIWP/pr1',
                     },
                     {
-                        title: 'Работа 3',
-                        link: '#',
+                        title: 'Тест (17.01)',
+                        link: '/PRIWP/test1701',
+                    },
+                    {
+                        title: 'Лабораторная 1 (21.01)',
+                        link: '/PRIWP/lab1',
                     },
                 ]"
             />

@@ -9,7 +9,7 @@ const {
 <template>
     <RouterLink :to="link" class="flex justify-center">
         <img
-            src="/back.svg"
+            src="/undo.svg"
             alt=""
             class="p-2 rounded-full size-10 flex hover:-translate-y-[1px] transition-all"
             :class="custom"
