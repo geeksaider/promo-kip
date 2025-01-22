@@ -4,8 +4,8 @@ import LinkField from "@/components/LinkField.vue";
 </script>
 
 <template>
-    <main class="font-cute px-4">
-        <Header></Header>
-        <LinkField></LinkField>
-    </main>
+  <main class="font-cute px-4">
+    <Header></Header>
+    <LinkField></LinkField>
+  </main>
 </template>
