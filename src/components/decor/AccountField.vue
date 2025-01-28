@@ -1,20 +1,17 @@
 <script setup>
 import Wrap from "./Wrap.vue";
-import PageHeader from "./PageHeader.vue";
+
 import NavLink from "./NavLink.vue";
-import Button from "../Button.vue";
+import Button from "./Button.vue";
+import Input from "./Input.vue";
 import { ref } from "vue";
 
 const active = ref("my-order");
 </script>
 <template>
-    <Wrap>
-        <PageHeader>Личный кабинет</PageHeader>
-    </Wrap>
-
-    <section class="bg-orange-50/50">
-        <Wrap class="flex gap-16 py-12">
-            <nav class="flex flex-col gap-3">
+    <section class="bg-nud-200/40 flex-grow">
+        <Wrap class="flex gap-16 py-12 w-full">
+            <nav class="flex flex-col gap-3 border-r-2 pr-8 border-black/60">
                 <NavLink
                     :active="active == 'my-order' ? true : false"
                     @click="active = 'my-order'"
@@ -31,26 +28,26 @@ const active = ref("my-order");
                     >Мои данные</NavLink
                 >
             </nav>
-            <div class="bg-black h-full w-0.5"></div>
             <div class="flex">
                 <div v-if="active == 'my-order'" class="flex flex-col gap-4">
                     <h1>У вас нет новых заказов</h1>
-                    <button
-                        class="px-6 py-2 w-fit border-stone-600 border-2 transition-all hover:bg-stone-600/10"
-                    >
-                        Перейти в катлог
-                    </button>
+                    <Button> Перейти в катлог </Button>
                 </div>
                 <div
                     v-else-if="active == 'wait-list'"
                     class="flex flex-col gap-4"
                 >
                     <h1>Интересующие вас товары в наличии</h1>
-                    <button
-                        class="px-6 py-2 w-fit border-stone-600 border-2 transition-all hover:bg-stone-600/10"
-                    >
-                        Перейти в катлог
-                    </button>
+                    <Button> Перейти в катлог </Button>
+                </div>
+                <div
+                    v-else-if="active == 'my-data'"
+                    class="flex flex-col gap-4"
+                >
+                    <Input></Input>
+                    <Input></Input>
+                    <Input></Input>
+                    <Button>Сохранить</Button>
                 </div>
             </div>
         </Wrap>
