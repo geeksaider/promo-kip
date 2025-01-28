@@ -1,9 +1,11 @@
 <script setup>
+import PageHeader from "./PageHeader.vue";
 import ProductCard from "./ProductCard.vue";
+import Wrap from "./Wrap.vue";
 </script>
 <template>
-    <section class="max-w-[1200px] mx-auto font-inter">
-        <h1 class="text-3xl font-light py-12 text-center pr-11">Корзина</h1>
+    <Wrap>
+        <PageHeader>Корзина</PageHeader>
         <div class="flex justify-between gap-4">
             <div class="basis-2/3">
                 <ProductCard>
@@ -52,5 +54,5 @@ import ProductCard from "./ProductCard.vue";
                 </button>
             </div>
         </div>
-    </section>
+    </Wrap>
 </template>
