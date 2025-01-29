@@ -9,18 +9,20 @@ import PRIWP2101 from "./pages/PRIWP/PRIWP(21.01).vue";
 import Test1701 from "./pages/PRIWP/Test1701.vue";
 import shopping from "./pages/DecorSite/shopping.vue";
 import account from "./pages/DecorSite/personalAcc.vue";
+import table from "./pages/Labs/tableForLab.vue";
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes: [
-        { path: "/", component: Index },
-        { path: "/Labs/first", component: firstLab },
-        { path: "/PRIWP/pr1", component: PRIWP1501 },
-        { path: "/PRIWP/lab1", component: PRIWP2101 },
-        { path: "/PRIWP/test1701", component: Test1701 },
-        { path: "/DecorSite/shopping", component: shopping },
-        { path: "/DecorSite/account", component: account },
-    ],
+  history: createWebHistory(),
+  routes: [
+    { path: "/", component: Index },
+    { path: "/Labs/first", component: firstLab },
+    { path: "/PRIWP/pr1", component: PRIWP1501 },
+    { path: "/PRIWP/lab1", component: PRIWP2101 },
+    { path: "/PRIWP/test1701", component: Test1701 },
+    { path: "/DecorSite/shopping", component: shopping },
+    { path: "/DecorSite/account", component: account },
+    { path: "/table", component: table },
+  ],
 });
 
 createApp(RouterView).use(router).mount("body");

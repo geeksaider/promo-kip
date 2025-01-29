@@ -21,6 +21,10 @@ import { RouterLink } from "vue-router";
             title: 'Практическая 1 (16.01.2025) ',
             link: '/Labs/first',
           },
+          {
+            title: 'Таблица 20 задач ',
+            link: '/Table',
+          },
         ]"
       />
       <Accordion
