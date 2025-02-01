@@ -8,16 +8,6 @@ const {
   disabled = false,
 } = defineProps(["name", "type", "disabled"]);
 
-// const style = ref({
-//   val: {
-//     "": " inset-0 pl-4 pointer-events-none peer-focus:items-start peer-focus:-top-6 peer-focus:pl-0 peer-focus:text-black/60 ",
-//     : "-top-6 pl-0 ",
-//   },
-//   disabled: {
-//     true: "bg-white pointer-events-none",
-//   },
-// });
-
 const style = ref("");
 const val = ref(name);
 
