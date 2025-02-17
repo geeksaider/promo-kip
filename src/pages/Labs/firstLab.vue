@@ -1,6 +1,6 @@
 <script setup>
-import Header from "@/components/Header.vue";
-import LabField from "@/components/LabField.vue";
+import Header from "@/components/landing/Header.vue";
+import LabField from "@/components/landing/LabField.vue";
 </script>
 <template>
     <main class="font-cute px-4">

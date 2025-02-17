@@ -1,6 +1,6 @@
 <script setup>
-import Header from "@/components/Header.vue";
-import LabTemplate from "@/components/LabTemplate.vue";
+import Header from "@/components/landing/Header.vue";
+import LabTemplate from "@/components/landing/LabTemplate.vue";
 </script>
 
 <template>

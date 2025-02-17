@@ -1,6 +1,6 @@
 <script setup>
-import Button from "./Button.vue";
-import Back from "./Back.vue";
+import Button from "@/components/landing/Button.vue";
+import Back from "@/components/landing/Back.vue";
 import { ref } from "vue";
 
 const photo = ref(" ");
